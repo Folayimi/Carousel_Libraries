@@ -1,0 +1,108 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:white;
+}
+
+.carousel{
+    position:fixed;
+    transition:0.5s;
+}
+
+.carousel > .image{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    position:absolute;
+    font-size:15px;
+    font-family:"Calibri";
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    left:20%;
+    right:20%;
+    z-index:1500;
+}
+
+.label{
+    position:absolute;
+    top:5vh;
+    left:87%;
+    width:35px;
+    height:30px;
+    background:gray;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:13px;
+    z-index:1000;
+}
+.baseline{
+    position:fixed;
+    bottom:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    z-index:1;
+}
+.baseline > .box{
+    min-width:30%;
+    Height:12rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.circle{
+    border:1px solid black;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+    transition:0.5s;
+}
+.forwardbtn{
+    position:fixed;
+    top:40vh;
+    right:0;
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    color:white;
+    font-size:25px;
+    font-weight: bolder;
+    font-family: 'Arial';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+.backwardbtn{
+    position:fixed;
+    top:40vh;
+    left:0;
+    width:40px;
+    height:40px;    
+    border-radius: 20px;
+    color:white;
+    font-size:25px;
+    font-weight: bolder;
+    font-family: 'Arial';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
