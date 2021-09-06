@@ -7,7 +7,7 @@ Simplified and Ready Made Functions for smooth development
 
 ![Sunset](https://user-images.githubusercontent.com/75343238/132236286-05e2c82f-f555-4786-8a8d-76089e81cd6f.PNG) ![Sunset](https://user-images.githubusercontent.com/75343238/132236134-60c4ef73-0f06-441f-b49b-93a1936a57de.JPG)
 
-https://devfola.netlify.app
+visit https://carouseldemo.netlify.app to see how it operates.
 
 ## Note: This works on Workframes of Javascript such as Next.js, React.js etc..
 
