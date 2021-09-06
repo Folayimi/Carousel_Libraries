@@ -9,7 +9,7 @@ Simplified and Ready Made Functions for smooth development
 
 https://devfola.netlify.app
 
-## NOTE: THIS WORKS ON WORKFRAMES OF JAVASCRIPTS SUCH AS Next.js,React.js etc..
+## Note: This works on Workframes of Javascript such as Next.js, React.js etc..
 
 ## Guidelines and Steps to make use of my Library
 
@@ -45,7 +45,7 @@ intergrated with some react hooks and mappings.
 
 The "carousel.css" and "data.js (json file)" are the files required for smooth operation.
 
-## FOLLOW THE STEPS BELOW TO MAKE USE OF THE COMPONENTS IN YOUR PC
+## Follow The Steps Below to Make Use of The Components in Your PC
 
 -> clone the repo to your local machine
 
