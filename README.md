@@ -11,7 +11,7 @@ https://devfola.netlify.app
 
 ## NOTE: THIS WORKS IN WORKFRAMES OF JAVASCRIPTS SUCH AS Next.js,React.js etc..
 
-## Guidelines and Steps to make use of the Library
+## Guidelines and Steps to make use of my Library
 
 The library only accepts a list of user input named "data".
 
