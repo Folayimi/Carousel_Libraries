@@ -9,7 +9,7 @@ Simplified and Ready Made Functions for smooth development
 
 https://devfola.netlify.app
 
-## NOTE: THIS WORKS IN WORKFRAMES OF JAVASCRIPTS SUCH AS Next.js,React.js etc..
+## NOTE: THIS WORKS ON WORKFRAMES OF JAVASCRIPTS SUCH AS Next.js,React.js etc..
 
 ## Guidelines and Steps to make use of my Library
 
