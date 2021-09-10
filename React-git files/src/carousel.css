@@ -1,47 +1,37 @@
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
-}
 
 body{
-    background:white;
+    overflow-x: hidden;          
 }
 
-.carousel{
-    position:fixed;
-    transition:0.5s;
+.slide{               
+    display: flex;
+    flex-direction: column;     
 }
-
-.carousel > .image{
-    width:100%;
+.carousel{              
+    position:absolute;            
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition:0.2s;           
 }
 
 .text{
-    position:absolute;
+    position:relative;
     font-size:15px;
     font-family:"Calibri";
     text-align:center;
     display:flex;
     align-items: center;
-    justify-content: center;
-    left:20%;
-    right:20%;
+    justify-content: center;    
     z-index:1500;
 }
 
 .label{
-    position:absolute;
-    top:5vh;
-    left:87%;
-    width:35px;
+    position:absolute;    
+    margin-left:10px;
+    margin-top: 10px;
+    width:40px;
     height:30px;
     background:gray;
     color:white;
@@ -52,20 +42,18 @@ body{
     z-index:1000;
 }
 .baseline{
-    position:fixed;
-    bottom:0;
+    width:100%;    
     display:flex;
     align-items: center;
-    justify-content: center;
-    width:100%;
+    justify-content: center;    
     z-index:1;
 }
-.baseline > .box{
+.baseline > .box{    
     min-width:30%;
-    Height:12rem;
+    Height:2rem;
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
 }
 .circle{
     border:1px solid black;
@@ -74,35 +62,32 @@ body{
     height:10px;
     transition:0.5s;
 }
-.forwardbtn{
-    position:fixed;
-    top:40vh;
-    right:0;
-    width:40px;
-    height:40px;
+.btnContainer{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top:60%;
+}
+.forwardbtn{      
+    width:30px;
+    height:30px;
     border-radius: 20px;
-    color:white;
-    font-size:25px;
-    font-weight: bolder;
-    font-family: 'Arial';
+    color:white;        
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor:pointer;
     z-index: 1500;
 }
-.backwardbtn{
-    position:fixed;
-    top:40vh;
-    left:0;
-    width:40px;
-    height:40px;    
+.backwardbtn{            
+    width:30px;
+    height:30px;    
     border-radius: 20px;
     color:white;
-    font-size:25px;
-    font-weight: bolder;
-    font-family: 'Arial';
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor:pointer;
     z-index: 1500;
 }
