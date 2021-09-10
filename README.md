@@ -52,20 +52,7 @@ The "carousel.css" and "data.js (json file)" are the files required for smooth o
 
    Execute the following in the json file.
 	
-   export default data = [ 
-   {
-	    id:1,
-   	  image:"scr",
-	    text: "txt"
-   },
-   {
-	    id:2,
-    	image:"scr",
-	    text: "txt"
-   },
-   {},
-   ....
-   ]
+   ![Code for data](https://user-images.githubusercontent.com/75343238/132914615-10d98388-5ae5-4ab7-bf7e-101f26fee881.JPG)
 
 The data input in the 'name' list can be unlimited provided the naming convention is followed
 
