@@ -77,4 +77,6 @@ import data from './data.js' or 'data'(if in the same folder);
 //Note: 'data' is the name given to the data list in the data.js file.
 
 -> Then call the Library function "Carousel data= data" when you need it.
+![CaroD](https://user-images.githubusercontent.com/75343238/132914892-4c28e508-9295-4898-8e61-cc266ca3eaf2.JPG)
+
 
