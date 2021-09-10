@@ -8,7 +8,7 @@ visit https://carouseluse.netlify.app to see how it operates.
 
 ## Note: This works on Workframes of Javascript such as Next.js, React.js etc..
 
-## Guidelines and Steps to make use of my Library
+## Guidelines and Steps to make use of the Library
 
 The library only accepts a list of user input named "data".
 
