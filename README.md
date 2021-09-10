@@ -2,12 +2,9 @@
 
 Simplified and Ready Made Functions for smooth development
 
-![Nature](https://user-images.githubusercontent.com/75343238/132236166-4bfb3ffc-6dab-4d96-b7c1-cc8da180312c.PNG) ![Nature](https://user-images.githubusercontent.com/75343238/132236208-a42d6c2f-a1ec-492c-a1f4-32eca0d25c97.JPG)
+![Nature](https://user-images.githubusercontent.com/75343238/132236166-4bfb3ffc-6dab-4d96-b7c1-cc8da180312c.PNG) ![Sunset](https://user-images.githubusercontent.com/75343238/132236134-60c4ef73-0f06-441f-b49b-93a1936a57de.JPG)
 
-
-![Sunset](https://user-images.githubusercontent.com/75343238/132236286-05e2c82f-f555-4786-8a8d-76089e81cd6f.PNG) ![Sunset](https://user-images.githubusercontent.com/75343238/132236134-60c4ef73-0f06-441f-b49b-93a1936a57de.JPG)
-
-visit https://carouseldemo.netlify.app to see how it operates.
+visit https://carouseluse.netlify.app to see how it operates.
 
 ## Note: This works on Workframes of Javascript such as Next.js, React.js etc..
 
@@ -55,20 +52,7 @@ The "carousel.css" and "data.js (json file)" are the files required for smooth o
 
    Execute the following in the json file.
 	
-   export default data = [ 
-   {
-	    id:1,
-   	  image:"scr",
-	    text: "txt"
-   },
-   {
-	    id:2,
-    	image:"scr",
-	    text: "txt"
-   },
-   {},
-   ....
-   ]
+   ![Code for data](https://user-images.githubusercontent.com/75343238/132914615-10d98388-5ae5-4ab7-bf7e-101f26fee881.JPG)
 
 The data input in the 'name' list can be unlimited provided the naming convention is followed
 
@@ -93,4 +77,6 @@ import data from './data.js' or 'data'(if in the same folder);
 //Note: 'data' is the name given to the data list in the data.js file.
 
 -> Then call the Library function "Carousel data= data" when you need it.
+![CaroD](https://user-images.githubusercontent.com/75343238/132914892-4c28e508-9295-4898-8e61-cc266ca3eaf2.JPG)
+
 
