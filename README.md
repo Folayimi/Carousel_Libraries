@@ -4,7 +4,7 @@ Simplified and Ready Made Functions for smooth development
 
 ![Nature](https://user-images.githubusercontent.com/75343238/132236166-4bfb3ffc-6dab-4d96-b7c1-cc8da180312c.PNG) ![Sunset](https://user-images.githubusercontent.com/75343238/132236134-60c4ef73-0f06-441f-b49b-93a1936a57de.JPG)
 
-visit https://carouseldemo.netlify.app to see how it operates.
+visit https://carouseluse.netlify.app to see how it operates.
 
 ## Note: This works on Workframes of Javascript such as Next.js, React.js etc..
 
