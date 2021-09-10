@@ -2,10 +2,7 @@
 
 Simplified and Ready Made Functions for smooth development
 
-![Nature](https://user-images.githubusercontent.com/75343238/132236166-4bfb3ffc-6dab-4d96-b7c1-cc8da180312c.PNG) ![Nature](https://user-images.githubusercontent.com/75343238/132236208-a42d6c2f-a1ec-492c-a1f4-32eca0d25c97.JPG)
-
-
-![Sunset](https://user-images.githubusercontent.com/75343238/132236286-05e2c82f-f555-4786-8a8d-76089e81cd6f.PNG) ![Sunset](https://user-images.githubusercontent.com/75343238/132236134-60c4ef73-0f06-441f-b49b-93a1936a57de.JPG)
+![Nature](https://user-images.githubusercontent.com/75343238/132236166-4bfb3ffc-6dab-4d96-b7c1-cc8da180312c.PNG) ![Sunset](https://user-images.githubusercontent.com/75343238/132236134-60c4ef73-0f06-441f-b49b-93a1936a57de.JPG)
 
 visit https://carouseldemo.netlify.app to see how it operates.
 
