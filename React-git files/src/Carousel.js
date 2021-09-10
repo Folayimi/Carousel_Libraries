@@ -1,11 +1,10 @@
 import React from 'react';
 import './carousel.css';
 import {useState,useEffect} from 'react';
+import {ChevronRightIcon,ChevronLeftIcon} from "@heroicons/react/solid"
 
 const Carousel = (props) =>{
-    var count=0;    
-    const next = ">";
-    const previous = "<";
+    var count=0;        
     const [mouseDown,setMouseDown] = useState(false);
     const [initiate,setInitiate] = useState(false);
     const [moveLeft,setMoveLeft] = useState(false);
@@ -17,18 +16,16 @@ const Carousel = (props) =>{
     const [Initial,setInitial] = useState(0);
     const [Final,setFinal] = useState(0);
     const [BaseColor,setBaseColor] = useState([]);
-            
-    var {width="100%",
-            height="80vh",
-            background="white",
-            color,
+
+    var {   
+            width="15rem",
+            height="20rem",
+            background="",
+            color="black",
             fontSize,
-            fontFamily,            
-            marginTop="10%",
-            marginBottom="10%",            
-            ImageW="70%",
-            ImageH="70vh",
-            textTop="80vh",
+            fontFamily,                                   
+            ImageW="80%",
+            ImageH="80%",            
             showLabel=true,
             showBase=true,
             setButton=true,
@@ -120,16 +117,16 @@ const Carousel = (props) =>{
             clearList();
         }
     },[moveLeft,moveRight]);
-    
+
     if(showBase===true){                
             return(
                 <>
-                <div className="slide"
+                <div 
                             style={{
-                                width:width, 
-                                height:height,
-                                background:background
-                                }}>
+                                width:width,
+                                height:height                                                                                                
+                                }}
+                            className="slide">
                 {
                     data.map((items)=>{
                         const {id,image,text}=items;
@@ -138,12 +135,15 @@ const Carousel = (props) =>{
                         <>
                         <div className="carousel" key={items.id}
                         style={{
+                            width:"inherit",
+                            height:"inherit",
+                            background:background,
                             zIndex:Index,
-                            left:`${marginL[id-1]}%`,
-                            right:`${marginR[id-1]}%`
+                            marginLeft:`${marginL[id-1]}%`,
+                            marginRight:`${marginR[id-1]}%`
                         }}
-    
-    
+
+
                         onMouseDown={(e)=>{
                             setMouseDown(true);
                             setInitial(e.clientX);
@@ -158,8 +158,8 @@ const Carousel = (props) =>{
                                 setMoveRight(true);                                                                                                                           
                             }
                         }}                    
-    
-    
+
+
                         onTouchStart={(i)=>{
                             setMouseDown(true);
                             setInitial(i.targetTouches[0].clientX);                        
@@ -175,24 +175,24 @@ const Carousel = (props) =>{
                             }
                         }}            
                         >
-    
-                        <div className="image" style={{height:ImageH,
-                        marginTop:marginTop,
-                        marginBottom:marginBottom}}>
+
+                        <div className="image" 
+                        style={{height:ImageH, width:ImageW}}
+                        >
                             <img src={image}
                             style={{
-                                width:ImageW,
-                                height:ImageH
+                                width:"100%",
+                                height:"100%"                                
                             }} 
                             alt="Img"/>
                         </div>
                         <div className="text"
-                        style={{
-                            top:textTop,
+                        style={{                            
                             color:color,
                             fontSize:fontSize,
-                            fontFamily:fontFamily,                        
-                            }}>
+                            fontFamily:fontFamily                                                                                
+                            }}
+                            >
                             <p>{text}</p>
                         </div>                    
                         </div>                    
@@ -210,12 +210,13 @@ const Carousel = (props) =>{
                             )                            
                         }                        
                     })                    
-                }
+                }                
                 {
                     data.map((button)=>{
                         if(setButton===true && button.id===count){
                             return(
                                 <>
+                    <div className="btnContainer">
                     <div className="forwardbtn"
                     onClick={()=>{                     
                         setMouseDown(true);
@@ -223,10 +224,15 @@ const Carousel = (props) =>{
                         setId(label);
                         setInitial(0);
                         setFinal(0);                    
-                    }} style={{background:buttonColor}}>
-                            {next}
+                    }} 
+                    style={{
+                        background:buttonColor,                        
+                    }}
+
+                    >
+                        <ChevronRightIcon width="30px"/>
                     </div>
-    
+
                     <div className="backwardbtn"
                     onClick={()=>{                    
                         setMouseDown(true);
@@ -234,120 +240,121 @@ const Carousel = (props) =>{
                         setId(label); 
                         setInitial(0);
                         setFinal(0);                   
-                    }} style={{background:buttonColor}}>
-                            {previous}
+                    }} 
+                    style={{background:buttonColor}}
+                    >
+                        <ChevronLeftIcon width="30px"/>
                     </div>
+                    </div>                    
                                 </>
                             )
                         }                        
                     })
-                }            
+                }                                           
                 </div>
-                                              
-                <div className="baseline"
-                style={{background:background}}>
-                    <div className="box"
-                    style={{background:background}}>
-                        {
-                            data.map((event)=>{                            
-                                return(
-                                    <div className="circle" key={event.id}
-                                    style={{background:BaseColor[event.id-1]}}></div>                                
-                                )                                                        
-                            })
-                        }
+                {
+                    <div className="baseline"
+                    style={{background:background,
+                    width:width}}
+                    >
+                        <div className="box"
+                        style={{background:background}}
+                        >
+                            {
+                                data.map((event)=>{                            
+                                    return(
+                                        <div className="circle" key={event.id}
+                                        style={{background:BaseColor[event.id-1]}}                                        
+                                        ></div>                                
+                                    )                                                        
+                                })
+                            }
+                        </div>
                     </div>
-                </div>                 
+                }                                                                               
             </>       
-            )                        
+            )                                    
     }
     return(
         <>
-        <div className="slide"
+        <div 
                     style={{
-                        width:width, 
-                        height:height,
-                        background:background
-                        }}>
+                        width:width,
+                        height:height                                                                                                
+                        }}
+                    className="slide">
         {
-            
             data.map((items)=>{
                 const {id,image,text}=items;
-                var Index=999-id;                                
+                var Index =999-id;                                    
                 return(
                 <>
-                    <div className="carousel" key={items.id}
+                <div className="carousel" key={items.id}
+                style={{
+                    width:"inherit",
+                    height:"inherit",
+                    background:background,
+                    zIndex:Index,
+                    marginLeft:`${marginL[id-1]}%`,
+                    marginRight:`${marginR[id-1]}%`
+                }}
+
+
+                onMouseDown={(e)=>{
+                    setMouseDown(true);
+                    setInitial(e.clientX);
+                    setId(id);                        
+                }}
+                onMouseMove={(m)=>{                        
+                    setFinal(m.clientX);
+                    if(mouseDown===true && Final<Initial){
+                        setMoveLeft(true);                                                                                   
+                    }
+                    else if(mouseDown===true && Initial<Final){                            
+                        setMoveRight(true);                                                                                                                           
+                    }
+                }}                    
+
+
+                onTouchStart={(i)=>{
+                    setMouseDown(true);
+                    setInitial(i.targetTouches[0].clientX);                        
+                    setId(id);                        
+                }}
+                onTouchMove={(j)=>{                        
+                    setFinal(j.targetTouches[0].clientX);
+                    if(mouseDown===true && Final<Initial){
+                        setMoveLeft(true);                                                                                  
+                    }
+                    else if(mouseDown===true && Initial<Final){                            
+                        setMoveRight(true);                                                                                                
+                    }
+                }}            
+                >
+
+                <div className="image" 
+                style={{height:ImageH, width:ImageW}}
+                >
+                    <img src={image}
                     style={{
-                        zIndex:Index,
-                        left:`${marginL[id-1]}%`,
-                        right:`${marginR[id-1]}%`
+                        width:"100%",
+                        height:"100%"                                
+                    }} 
+                    alt="Img"/>
+                </div>
+                <div className="text"
+                style={{                            
+                    color:color,
+                    fontSize:fontSize,
+                    fontFamily:fontFamily                                                                                
                     }}
-
-
-                    onMouseDown={(e)=>{
-                        setMouseDown(true);
-                        setInitial(e.clientX);
-                        setId(id);                        
-                    }}
-                    onMouseMove={(m)=>{                        
-                        setFinal(m.clientX);
-                        if(mouseDown===true && Final<Initial){
-                            setMoveLeft(true);                                                                                   
-                        }
-                        else if(mouseDown===true && Initial<Final){                            
-                            setMoveRight(true);                                                                                                                           
-                        }
-                    }}
-                    onMouseUp={()=>{
-                        setMouseDown(false);
-                        setMoveRight(false);
-                        setMoveLeft(false);
-                    }}                    
-
-
-                    onTouchStart={(i)=>{
-                        setMouseDown(true);
-                        setInitial(i.targetTouches[0].clientX);                    
-                        setId(id);                        
-                    }}
-                    onTouchMove={(j)=>{                        
-                        setFinal(j.targetTouches[0].clientX);
-                        if(mouseDown===true && Final<Initial){
-                            setMoveLeft(true);                                                                                  
-                        }
-                        else if(mouseDown===true && Initial<Final){                            
-                            setMoveRight(true);                                                                                                
-                        }
-                    }}
-                    onTouchEnd={()=>{
-                        setMouseDown(false);
-                        setMoveRight(false);
-                        setMoveLeft(false);
-                    }}            
                     >
-                    <div className="image" style={{height:ImageH,
-                    marginTop:marginTop,
-                    marginBottom:marginBottom}}>
-                        <img src={image}
-                        style={{
-                            width:ImageW,
-                            height:ImageH
-                        }} 
-                        alt="Img"/>
-                    </div>
-                    <div className="text"
-                    style={{
-                        top:textTop,
-                        color:color,
-                        fontSize:fontSize,
-                        fontFamily:fontFamily,                        
-                        }}>
-                        <p>{text}</p>
-                    </div>            
-                    </div>                    
+                    <p>{text}</p>
+                </div>                    
+                </div>                    
                 </>
-                )
-            })
+                )                        
+            })                            
         }
         {
             data.map((Label)=>{
@@ -359,40 +366,49 @@ const Carousel = (props) =>{
                     )                            
                 }                        
             })                    
-        }      
+        }        
         {
-                    data.map((button)=>{
-                        if(setButton===true && button.id===count){
-                            return(
-                                <>
-                    <div className="forwardbtn"
-                    onClick={()=>{                     
-                        setMouseDown(true);
-                        setMoveLeft(true);
-                        setId(label);
-                        setInitial(0);
-                        setFinal(0);                    
-                    }} style={{background:buttonColor}}>
-                            {next}
-                    </div>
-    
-                    <div className="backwardbtn"
-                    onClick={()=>{                    
-                        setMouseDown(true);
-                        setMoveRight(true);
-                        setId(label); 
-                        setInitial(0);
-                        setFinal(0);                   
-                    }} style={{background:buttonColor}}>
-                            {previous}
-                    </div>
-                                </>
-                            )
-                        }                        
-                    })
-                }  
-        </div>
-        </>
+            data.map((button)=>{
+                if(setButton===true && button.id===count){
+                    return(
+                        <>
+            <div className="btnContainer">
+            <div className="forwardbtn"
+            onClick={()=>{                     
+                setMouseDown(true);
+                setMoveLeft(true);
+                setId(label);
+                setInitial(0);
+                setFinal(0);                    
+            }} 
+            style={{
+                background:buttonColor,                        
+            }}
+
+            >
+                <ChevronRightIcon width="30px"/>
+            </div>
+
+            <div className="backwardbtn"
+            onClick={()=>{                    
+                setMouseDown(true);
+                setMoveRight(true);
+                setId(label); 
+                setInitial(0);
+                setFinal(0);                   
+            }} 
+            style={{background:buttonColor}}
+            >
+                <ChevronLeftIcon width="30px"/>
+            </div>
+            </div>                    
+                        </>
+                    )
+                }                        
+            })
+        }                            
+        </div>                                                                              
+    </>       
     )
 }
 export default Carousel
