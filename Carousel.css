@@ -1,0 +1,93 @@
+
+body{
+    overflow-x: hidden;          
+}
+
+.slide{               
+    display: flex;
+    flex-direction: column;     
+}
+.carousel{              
+    position:absolute;            
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition:0.2s;           
+}
+
+.text{
+    position:relative;
+    font-size:15px;
+    font-family:"Calibri";
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+    z-index:1500;
+}
+
+.label{
+    position:absolute;    
+    margin-left:10px;
+    margin-top: 10px;
+    width:40px;
+    height:30px;
+    background:gray;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:13px;
+    z-index:1000;
+}
+.baseline{
+    width:100%;    
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+    z-index:1;
+}
+.baseline > .box{    
+    min-width:30%;
+    Height:2rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+.circle{
+    border:1px solid black;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+    transition:0.5s;
+}
+.btnContainer{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top:60%;
+}
+.forwardbtn{      
+    width:30px;
+    height:30px;
+    border-radius: 20px;
+    color:white;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    z-index: 1500;
+}
+.backwardbtn{            
+    width:30px;
+    height:30px;    
+    border-radius: 20px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    z-index: 1500;
+}
